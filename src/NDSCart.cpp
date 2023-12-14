@@ -1648,7 +1648,7 @@ std::unique_ptr<CartCommon> ParseROM(const u8* romdata, u32 romlen)
     u32 jpGamecode = 1246186329;
     if (gamecode != usGamecode && gamecode != euGamecode && gamecode != jpGamecode) {
         // Only Days should be loadable
-        return nullptr;
+        return true;
     }
 
     u32 arm9base = header.ARM9ROMOffset;
